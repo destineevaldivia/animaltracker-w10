@@ -15,11 +15,11 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hola, from My template ExpressJS with React-Vite' });
 });
 
-// create the get request for animals in the endpoint '/api/animals'
-app.get('/api/animals', async (req, res) => {
+//GET request for 'species' table 
+app.get('/api/species/:id', async (req, res) => {
     try {
-        const { rows: animals } = await db.query('SELECT * FROM animals');
-        res.send(animals);
+        const { rows: species } = await db.query('SELECT * FROM species'); //"SELECT * FROM individual_animals JOIN species ON species=species_id WHERE species_id=$1",
+        res.send(species);
     } catch (e) {
         return res.status(400).json({ e });
     }
