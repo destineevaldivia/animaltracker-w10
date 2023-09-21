@@ -1,16 +1,16 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNavBar from './components/Navbar'
-import ListStudents from './components/ListSightings'
+import Sightings from './components/Sightings'
 
 
 function App() {
 
   return (
     <div className="App">
-      {/* <h2>Hello its me and Beyza and Rachel and Cristina</h2> */}
+      <h2>Hello its me in app.jsx</h2>
       {/* <MyNavBar /> */}
-      <ListSightings />
+      <Sightings />
 
     </div>
   )

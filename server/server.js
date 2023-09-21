@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 //GET request for 'species' table 
-app.get('/api/species/:id', async (req, res) => {
+app.get('/api/species/', async (req, res) => {
     try {
         const { rows: species } = await db.query('SELECT * FROM species'); 
         //"SELECT * FROM individual_animals JOIN species ON species=species_id WHERE species_id=$1",
@@ -28,7 +28,7 @@ app.get('/api/species/:id', async (req, res) => {
 });
 
 //GET request for 'individualanimals' table 
-app.get('/api/individualanimals/:id', async (req, res) => {
+app.get('/api/individualanimals/', async (req, res) => {
     try {
         const { rows: individualanimals } = await db.query('SELECT * FROM individualanimals'); 
         res.send(individualanimals);
@@ -39,7 +39,7 @@ app.get('/api/individualanimals/:id', async (req, res) => {
 });
 
 //GET request for 'scientists' table 
-app.get('/api/scientists/:id', async (req, res) => {
+app.get('/api/scientists/', async (req, res) => {
     try {
         const { rows: scientists } = await db.query('SELECT * FROM scientists'); 
         res.send(scientists);
@@ -50,7 +50,7 @@ app.get('/api/scientists/:id', async (req, res) => {
 });
 
 //GET request for 'sightings' table 
-app.get('/api/sightings/:id', async (req, res) => {
+app.get('/api/sightings/', async (req, res) => {
     try {
         const { rows: sightings } = await db.query('SELECT * FROM sightings'); 
         res.send(sightings);
