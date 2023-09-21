@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App">
       {/* <h2>Hello its me and Beyza and Rachel and Cristina</h2> */}
-      <MyNavBar />
-      <ListStudents />
+      {/* <MyNavBar />
+      <ListStudents /> */}
 
     </div>
   )

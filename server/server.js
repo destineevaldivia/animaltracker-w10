@@ -18,8 +18,43 @@ app.get('/', (req, res) => {
 //GET request for 'species' table 
 app.get('/api/species/:id', async (req, res) => {
     try {
-        const { rows: species } = await db.query('SELECT * FROM species'); //"SELECT * FROM individual_animals JOIN species ON species=species_id WHERE species_id=$1",
+        const { rows: species } = await db.query('SELECT * FROM species'); 
+        //"SELECT * FROM individual_animals JOIN species ON species=species_id WHERE species_id=$1",
         res.send(species);
+        console.log({ rows: species })
+    } catch (e) {
+        return res.status(400).json({ e });
+    }
+});
+
+//GET request for 'individualanimals' table 
+app.get('/api/individualanimals/:id', async (req, res) => {
+    try {
+        const { rows: individualanimals } = await db.query('SELECT * FROM individualanimals'); 
+        res.send(individualanimals);
+
+    } catch (e) {
+        return res.status(400).json({ e });
+    }
+});
+
+//GET request for 'scientists' table 
+app.get('/api/scientists/:id', async (req, res) => {
+    try {
+        const { rows: scientists } = await db.query('SELECT * FROM scientists'); 
+        res.send(scientists);
+
+    } catch (e) {
+        return res.status(400).json({ e });
+    }
+});
+
+//GET request for 'sightings' table 
+app.get('/api/sightings/:id', async (req, res) => {
+    try {
+        const { rows: sightings } = await db.query('SELECT * FROM sightings'); 
+        res.send(sightings);
+
     } catch (e) {
         return res.status(400).json({ e });
     }
