@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import * as ioicons from 'react-icons/io5'
-// import MyForm from './Form';
+import AddSightingsForm from './AddSightingsForm';
 import SightingsTable from './SightingsTable';
 
 const Sightings = () => {
@@ -64,7 +64,7 @@ console.log(sightings)
         <div className="mybody">
         <div className="sightings">
             
-            <h2>List Sightings component</h2>
+            <h2>View all Sightings</h2>
             <SightingsTable sightings={sightings} />
             {/* <SightingsTable sightings={sightings} toDelete={onDelete} toUpdate={onUpdate} /> */}
 

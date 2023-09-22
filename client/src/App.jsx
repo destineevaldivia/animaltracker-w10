@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Hello its me in app.jsx</h2>
+      <h2 className="maintitle">Animal Tracker for Endangered Marine Life</h2>
       {/* <MyNavBar /> */}
       <Sightings />
 

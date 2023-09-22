@@ -1,9 +1,16 @@
 .App {
   min-height: 100vh;
-  background-color: rgb(238, 232, 232);
+  /* background-color: rgb(249, 252, 255); */
   margin: 5px;
+  font-family: monospace;
 }
+.maintitle {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: monospace;
 
+}
 .mybody {
   display: flex;
   gap: 3em;
@@ -26,7 +33,7 @@ a.navbar-brand {
 }
 
 ul {
-  /* list-style-type: none; */
+  list-style-type: none;
 }
 
 

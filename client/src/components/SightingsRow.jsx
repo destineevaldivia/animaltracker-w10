@@ -14,14 +14,21 @@ const SightingsRow = ({sighting, toUpdate, toDelete}) => {
     // }
 
     return (
-        <Card>
-            <Card.Body>
-                
-            <Card.Title>{sighting.individual_animal_spotted} {sighting.sighting_location}</Card.Title>
-            <Button variant="outline-danger" onClick={()=>{onDelete(Sightings)}} style={{padding: '0.6em', marginRight:'0.9em'}}><ioicons.IoTrash/></Button>
-            <Button variant="outline-info" onClick={()=>{onUpdate(student)}} style={{padding: '0.6em'}}> <ioicons.IoSync/></Button>
-            </Card.Body>
-        </Card>
+
+        <tr>
+        <td>{sighting.id}</td>
+        <td>{sighting.sighting_datetime}</td>
+        <td>{sighting.individual_animal_spotted}</td>
+        <td>{sighting.sighting_location}</td>
+        <td>{sighting.appeared_healthy ? 'Yes' : 'No'}</td>
+        <td>{sighting.scientist_email}</td>
+        <td>{sighting.individual_animal_id}</td>
+        <td>{sighting.scientist_id}</td>
+      </tr>
+
+        // <Button variant="outline-danger" onClick={()=>{onDelete(Sightings)}} style={{padding: '0.6em', marginRight:'0.9em'}}><ioicons.IoTrash/></Button>
+        // <Button variant="outline-info" onClick={()=>{onUpdate(student)}} style={{padding: '0.6em'}}> <ioicons.IoSync/></Button>
+
     )
 
 }
