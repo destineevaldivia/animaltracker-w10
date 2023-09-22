@@ -15,6 +15,25 @@ app.get('/', (req, res) => {
     res.json({ message: 'Hola, from My template ExpressJS with React-Vite' });
 });
 
+//GET request for 'sightings' table JOINED WITH 'species', 'scientists' and 'individual'
+app.get('/api/sightings/', async (req, res) => {
+    try {
+        const { rows: sightings } = await db.query(
+            `SELECT sightings.id, sightings.sighting_datetime, sightings.individual_animal_spotted, species.common_name, sightings.sighting_location, sightings.appeared_healthy, scientists.scientist_name, sightings.scientist_email 
+            FROM sightings 
+            JOIN individualanimals ON sightings.individual_animal_id = individualanimals.id 
+            JOIN species ON individualanimals.species_id = species.id
+            JOIN scientists ON sightings.scientist_id = scientists.id`); 
+
+        res.send(sightings);
+
+    } catch (e) {
+        return res.status(400).json({ e });
+    }
+});
+
+
+
 //GET request for 'species' table 
 app.get('/api/species/', async (req, res) => {
     try {
@@ -47,18 +66,7 @@ app.get('/api/scientists/', async (req, res) => {
     } catch (e) {
         return res.status(400).json({ e });
     }
-});
-
-//GET request for 'sightings' table 
-app.get('/api/sightings/', async (req, res) => {
-    try {
-        const { rows: sightings } = await db.query('SELECT * FROM sightings'); 
-        res.send(sightings);
-
-    } catch (e) {
-        return res.status(400).json({ e });
-    }
-});
+}); 
 
 // create the POST request
 // app.post('/api/students', async (req, res) => {
@@ -83,19 +91,7 @@ app.get('/api/sightings/', async (req, res) => {
 
 // });
 
-// // delete request for students
-// app.delete('/api/students/:studentId', async (req, res) => {
-//     try {
-//         const studentId = req.params.studentId;
-//         await db.query('DELETE FROM students WHERE id=$1', [studentId]);
-//         console.log("From the delete request-url", studentId);
-//         res.status(200).end();
-//     } catch (e) {
-//         console.log(e);
-//         return res.status(400).json({ e });
 
-//     }
-// });
 
 // //A put request - Update a student 
 // app.put('/api/students/:studentId', async (req, res) =>{

@@ -3,29 +3,26 @@ import Table from 'react-bootstrap/Table';
 
 const SightingsTable = ({ sightings }) => {
   return (
-    <Table striped bordered hover size="sm">
+    <Table striped bordered hover size="sm" variant="dark">
     <thead>
             <tr>
             {/* <Header />  */}
-            <th>ID of Sighting</th>
             <th>When</th>
             <th>Animal's name</th>
-            <th>location of Sighting</th>
-            <th>Appeared Healthy?</th>
-            <th>Scientist's email</th>
-            <th>ID of Animal</th>
-            <th>ID of Scientist</th>
+            <th>Species</th>
+            <th>Location</th>
+            <th>Healthy?</th>
+            <th>Scientist</th>
+            <th>Email</th>
             </tr>
         </thead>
         <tbody>
-            {/* <tr> */}
+
                 {sightings.map((sighting) => (
-                
-                // <td>
                 <SightingsRow key={sighting.id} sighting={sighting} />
-                // </td>
+
             ))}
-            {/* </tr> */}
+            
         </tbody>
     </Table>
 

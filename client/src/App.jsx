@@ -2,6 +2,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNavBar from './components/Navbar'
 import Sightings from './components/Sightings'
+import AddSightingsForm from './components/AddSightingsForm';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <h2 className="maintitle">Animal Tracker </h2>
       <MyNavBar />
       <Sightings />
+      < AddSightingsForm />
 
     </div>
   )

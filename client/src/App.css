@@ -24,6 +24,9 @@ a.navbar-brand {
   color: white !important;
   margin-left: 5em;
 }
+.nav-link:hover {
+  color: rgb(243, 237, 87) !important;
+}
 
 .list-students {
   text-align: center;

@@ -11,6 +11,7 @@ function MyNavBar(props) {
       <Navbar bg="dark" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="">
+            JSON data:
             {/* Your brand content */}
           </Navbar.Brand>
           
