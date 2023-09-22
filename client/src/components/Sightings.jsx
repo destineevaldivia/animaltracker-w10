@@ -40,7 +40,7 @@ console.log(sightings)
             <SightingsTable sightings={sightings} />
             {/* <SightingsTable sightings={sightings} toDelete={onDelete} toUpdate={onUpdate} /> */}
 
-            < AddSightingsForm />
+            < AddSightingsForm onAddSighting={onAddSighting}/>
         </div>
         {/* <MyForm key={editingSightings ? editingSightings.id : null} onSaveSightings={onSaveSightings} editingStudent={editingSightings} onUpdateStudent={updateSightings} /> */}
         </div>

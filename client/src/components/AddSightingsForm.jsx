@@ -3,6 +3,7 @@ import { Button, Form, Dropdown } from 'react-bootstrap';
 
 const AddSightingsForm = ({ onAddSighting }) => {
   const [formData, setFormData] = useState({
+    id: '',
     sighting_datetime: '',
     individual_animal_spotted: '',
     common_name: '',
@@ -42,6 +43,7 @@ const AddSightingsForm = ({ onAddSighting }) => {
 
     // Clear the form
     setFormData({
+        id: '',
         sighting_datetime: '',
         individual_animal_spotted: '',
         common_name: '',
