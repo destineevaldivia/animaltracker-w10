@@ -42,10 +42,10 @@ console.log(sightings)
 
             < AddSightingsForm onAddSighting={onAddSighting}/>
         </div>
-        {/* <MyForm key={editingSightings ? editingSightings.id : null} onSaveSightings={onSaveSightings} editingStudent={editingSightings} onUpdateStudent={updateSightings} /> */}
+        {/* <MyForm key={editingSightings ? editingSightings.id : null} onSaveSightings={onSaveSightings} editingSightings={editingSightings} onUpdateSightings={updateSightings} /> */}
         </div>
     );
 }
 
 
-export default Sightings
+export default Sightings;
