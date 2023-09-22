@@ -26,11 +26,11 @@ const Sightings = () => {
                 console.error('Error fetching data in loadSightings fnx:', error);
             })
     }
-
-    // const onSaveStudent = (newStudent) => {
-    //     //console.log(newStudent, "From the parent - List of Students");
-    //     setStudents((students) => [...students, newStudent]);
-    // }
+    //taking original list of sightings, adding the new sighting to that list and updating the variable to that list
+    const onAddSighting = (newSighting) => {
+        //console.log(newSighting, "From the parent - List of Sighting");
+        setSightings((sightings) => [...sightings, newSighting]);
+    }
 
 console.log(sightings)
     return (
@@ -40,6 +40,7 @@ console.log(sightings)
             <SightingsTable sightings={sightings} />
             {/* <SightingsTable sightings={sightings} toDelete={onDelete} toUpdate={onUpdate} /> */}
 
+            < AddSightingsForm />
         </div>
         {/* <MyForm key={editingSightings ? editingSightings.id : null} onSaveSightings={onSaveSightings} editingStudent={editingSightings} onUpdateStudent={updateSightings} /> */}
         </div>
