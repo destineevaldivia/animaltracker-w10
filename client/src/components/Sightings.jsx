@@ -64,7 +64,6 @@ console.log(sightings)
         <div className="mybody">
         <div className="sightings">
             
-            <h2>View all Sightings</h2>
             <SightingsTable sightings={sightings} />
             {/* <SightingsTable sightings={sightings} toDelete={onDelete} toUpdate={onUpdate} /> */}
 

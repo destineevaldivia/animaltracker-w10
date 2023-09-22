@@ -8,8 +8,9 @@ function App() {
 
   return (
     <div className="App">
-      <h2 className="maintitle">Animal Tracker for Endangered Marine Life</h2>
-      {/* <MyNavBar /> */}
+      
+      <h2 className="maintitle">Animal Tracker </h2>
+      <MyNavBar />
       <Sightings />
 
     </div>

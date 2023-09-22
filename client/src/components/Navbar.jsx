@@ -8,27 +8,37 @@ function MyNavBar(props) {
 
   return (
     <>
-    <Navbar bg="dark" variant="dark" sticky="top">
-      <Container>
-        <Navbar.Brand href="/">
-        <img
-              src={Logo}
-              height="30"
-              className="d-lg-inline-block"
-              alt="React Bootstrap logo"
-            />
-        </Navbar.Brand>
-        <Nav.Link >Your Link</Nav.Link>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Cristina Rodriguez</a>
-          </Navbar.Text>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <Navbar bg="dark" variant="dark" sticky="top">
+        <Container>
+          <Navbar.Brand href="">
+            {/* Your brand content */}
+          </Navbar.Brand>
+          
+          <Nav.Link href="http://localhost:8080/api/sightings">
+            Sightings
+          </Nav.Link>
+
+          <Nav.Link href="http://localhost:8080/api/species">
+            Species
+          </Nav.Link>
+          
+          <Nav.Link href="http://localhost:8080/api/individualanimals/">
+            Individual Animals
+          </Nav.Link>
+
+          <Nav.Link href="http://localhost:8080/api/scientists/">
+            Scientists 
+          </Nav.Link>
+
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
-};
+}
+
 
 export default MyNavBar;
