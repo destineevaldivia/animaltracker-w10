@@ -32,33 +32,6 @@ const Sightings = () => {
     //     setStudents((students) => [...students, newStudent]);
     // }
 
-
-    //A function to control the update in the parent (student component)
-    // const updateStudent = (savedStudent) => {
-    //     // console.log("Line 29 savedStudent", savedStudent);
-    //     // This function should update the whole list of students - 
-    //     loadStudents();
-    // }
-
-    //A function to handle the Delete funtionality
-    // const onDelete = (student) => {
-    //     //console.log(student, "delete method")
-    //     return fetch(`http://localhost:8080/api/students/${student.id}`, {
-    //         method: "DELETE"
-    //     }).then((response) => {
-    //         //console.log(response);
-    //         if (response.ok) {
-    //             loadStudents();
-    //         }
-    //     })
-    // }
-
-    //A function to handle the Update functionality
-    // const onUpdate = (toUpdateStudent) => {
-    //     //console.log(toUpdateStudent);
-    //     setEditingStudent(toUpdateStudent);
-    // }
-
 console.log(sightings)
     return (
         <div className="mybody">
