@@ -17,10 +17,9 @@ const SightingsTable = ({ sightings }) => {
             </tr>
         </thead>
         <tbody>
-
                 {sightings.map((sighting) => (
                 <SightingsRow key={sighting.id} sighting={sighting} />
-
+                // {JSON.stringify(sighting)}
             ))}
             
         </tbody>
@@ -30,6 +29,3 @@ const SightingsTable = ({ sightings }) => {
 };
 
 export default SightingsTable;
-// {sightings.map((sighting) => (
-//     <SightingsRow key={sighting.id} sighting={sighting}> {JSON.stringify(sighting)} </SightingsRow>
-//     ))}
