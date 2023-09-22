@@ -14,6 +14,8 @@ const SightingsTable = ({ sightings }) => {
             <th>Healthy?</th>
             <th>Scientist</th>
             <th>Email</th>
+            <th></th>
+            <th></th>
             </tr>
         </thead>
         <tbody>
